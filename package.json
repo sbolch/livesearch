@@ -1,0 +1,30 @@
+{
+  "name": "livesearch",
+  "version": "1.0.0",
+  "description": "jQuery LiveSearch",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/subbysnake/LiveSearch.git"
+  },
+  "keywords": [
+    "livesearch"
+  ],
+  "author": "SubbySnake",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.0.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "del": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-rename": "^1.2.3",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^3.0.0"
+  }
+}
