@@ -2,24 +2,31 @@
 
 > Simple live search tool with jQuery.
 
+## Quick usage with CDN
+```html
+<srcipt src="https://unpkg.com/livesearch@1.0.0/js/livesearch.min.js"><script>
+```
+
+See the usage part below for more options.
+
 ## Installation
 
 ```console
-$ npm i @subbysnake/livesearch
+$ npm i livesearch
 ```
 
-or
+or with [Yarn](https://yarnpkg.com/lang/en/)
 
 ```console
-$ yarn add @subbysnake/livesearch
+$ yarn add livesearch
 ```
 
 ## Usage
 
-You can access the module 3 ways:
-- node_modules/@subbysnake/livesearch/coffeescript/livesearch.coffee <- uncompressed CoffeeScript file
-- node_modules/@subbysnake/livesearch/js/livesearch.js <- uncompressed ES6 file
-- node_modules/@subbysnake/livesearch/js/livesearch.min.js <- compressed ES5 file
+You can access the component in 3 ways:
+- node_modules/livesearch/coffeescript/livesearch.coffee <- uncompressed CoffeeScript file
+- node_modules/livesearch/js/livesearch.js <- uncompressed ES6 file
+- node_modules/livesearch/js/livesearch.min.js <- compressed ES5 file
 
 ### Example usage
 
