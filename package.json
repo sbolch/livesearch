@@ -26,5 +26,6 @@
     "gulp-rename": "^1.2.3",
     "gulp-uglify": "^3.0.0",
     "pump": "^3.0.0"
-  }
+  },
+  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
 }
