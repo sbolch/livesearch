@@ -1,6 +1,6 @@
 {
   "name": "livesearch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "jQuery LiveSearch",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,7 +12,7 @@
   "keywords": [
     "livesearch"
   ],
-  "author": "SubbySnake",
+  "author": "d3vy",
   "license": "ISC",
   "dependencies": {
     "jquery": "^3.0.0"
