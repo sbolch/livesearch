@@ -1,20 +1,14 @@
-let gulp    = require('gulp');
-let babel   = require('gulp-babel');
-let del     = require('del');
-let pump    = require('pump');
-let rename  = require('gulp-rename');
-let uglify  = require('gulp-uglify');
+const { dest, series, src } = require('gulp');
+const babel  = require('gulp-babel');
+const del    = require('del');
+const pump   = require('pump');
+const rename = require('gulp-rename');
+const uglify = require('gulp-uglify');
 
-gulp.task('clean', function(cb) {
-    return del(['js/livesearch.min.js'], cb);
-});
-
-gulp.task('default', ['clean'], function() {
-    pump([
-        gulp.src(['js/livesearch.js']),
-        babel({ presets: ['env'] }),
-        uglify(),
-        rename({ suffix: '.min' }),
-        gulp.dest('js')
-    ]);
-});
+exports.default = series(() => del(['js/livesearch.min.js'], { force: true }), cb => pump([
+    src(['js/livesearch.js']),
+    babel({ presets: ['@babel/env'] }),
+    uglify(),
+    rename({ suffix: '.min' }),
+    dest('js')
+], cb));

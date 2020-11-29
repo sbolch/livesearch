@@ -1,7 +1,7 @@
 {
   "name": "livesearch",
-  "version": "1.0.2",
-  "description": "jQuery LiveSearch",
+  "version": "2.0.0",
+  "description": "LiveSearch",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,18 +14,17 @@
   ],
   "author": "d3vy",
   "license": "ISC",
-  "dependencies": {
-    "jquery": "^3.0.0"
-  },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-preset-env": "^1.7.0",
-    "del": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^7.0.1",
-    "gulp-rename": "^1.2.3",
-    "gulp-uglify": "^3.0.0",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-uglify": "^3.0.2",
     "pump": "^3.0.0"
   },
-  "publishConfig": { "registry": "https://npm.pkg.github.com/" }
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  }
 }

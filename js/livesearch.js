@@ -13,6 +13,9 @@ class LiveSearch {
         this.container = container;
         this.allowedKeys = allowedKeys ? allowedKeys : [8, 32, 46]; // [backspace, space, delete]
         this.typeDelay = 200;
+
+        this.slideUp = e => e.style.height = '0';
+        this.slideDown = e => e.style.height = `${e.scrollHeight}px`;
     }
 
     /**
@@ -33,20 +36,25 @@ class LiveSearch {
 
                 container = container ? container : this.container;
                 if(container) {
-                    container.slideUp();
+                    this.slideUp(container);
                 }
 
                 url = url ? url : this.url;
 
                 let ls = this;
-                this.timer = setTimeout(function() {
-                    ls.lsCall = $.post(url, { q: value }, function(response) {
+                this.timer = setTimeout(() => {
+                    ls.lsCall = fetch(url, {
+                        method: 'POST',
+                        body: JSON.stringify({
+                            q: value
+                        })
+                    }).then(response => {
                         ls.lsCall = null; // close the call
 
                         if(container) {
-                            container.html(response);
+                            container.innerHTML = response;
                             if(response.length > 0) {
-                                container.slideDown();
+                                ls.slideDown(container);
                             }
                         }
 
@@ -59,3 +67,5 @@ class LiveSearch {
         }
     }
 }
+
+export default LiveSearch;
